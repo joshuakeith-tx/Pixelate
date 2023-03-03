@@ -20,3 +20,11 @@ td {
   width: 55px;
   background-color: lightgrey;
 }
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
