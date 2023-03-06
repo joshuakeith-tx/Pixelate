@@ -17,17 +17,17 @@ function makeRow() {
 let addRow = document.getElementById("add-row");
 addRow.addEventListener("click", makeRow, false);
 
-let td = document.querySelector("td")
+let td = document.querySelector("td");
 function changeColor(click) {
   console.log("clicked");
   let target = click.target;
-  target.classList.toggle("red")
+  target.classList.toggle("red");
 }
 table.addEventListener("click", changeColor, false);
 
 let selector = document.querySelector("select");
 
 function colorizer(change) {
-  console.log(change.target.value)
+  console.log(change.target.value);
 }
 selector.addEventListener("change", colorizer, false);
