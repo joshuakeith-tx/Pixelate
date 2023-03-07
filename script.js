@@ -18,16 +18,23 @@ let addRow = document.getElementById("add-row");
 addRow.addEventListener("click", makeRow, false);
 
 let td = document.querySelector("td");
-function changeColor(click) {
-  console.log("clicked");
-  let target = click.target;
-  target.classList.toggle("red");
-}
-table.addEventListener("click", changeColor, false);
 
 let selector = document.querySelector("select");
+let colorValue = "red";
 
 function colorizer(change) {
-  console.log(change.target.value);
+  colorValue = change.target.value;
 }
-selector.addEventListener("change", colorizer, false);
+
+selector.addEventListener("change", colorizer);
+
+function changeColor(click) {
+  let target = click.target;
+  if (target.className === colorValue) {
+    target.className = " ";
+  } else {
+    target.className = colorValue;
+  }
+}
+
+table.addEventListener("click", changeColor, false);
